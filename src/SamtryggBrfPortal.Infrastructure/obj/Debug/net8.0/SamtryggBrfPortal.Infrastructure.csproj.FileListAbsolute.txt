@@ -1,0 +1,15 @@
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/bin/Debug/net8.0/SamtryggBrfPortal.Infrastructure.deps.json
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/bin/Debug/net8.0/SamtryggBrfPortal.Infrastructure.dll
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/bin/Debug/net8.0/SamtryggBrfPortal.Infrastructure.pdb
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/bin/Debug/net8.0/SamtryggBrfPortal.Core.dll
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/bin/Debug/net8.0/SamtryggBrfPortal.Core.pdb
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/SamtryggBrfPortal.Infrastructure.csproj.AssemblyReference.cache
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/SamtryggBrfPortal.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/SamtryggBrfPortal.Infrastructure.AssemblyInfoInputs.cache
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/SamtryggBrfPortal.Infrastructure.AssemblyInfo.cs
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/SamtryggBrfPortal.Infrastructure.csproj.CoreCompileInputs.cache
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/Samtrygg.9C9C6A41.Up2Date
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/SamtryggBrfPortal.Infrastructure.dll
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/refint/SamtryggBrfPortal.Infrastructure.dll
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/SamtryggBrfPortal.Infrastructure.pdb
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Infrastructure/obj/Debug/net8.0/ref/SamtryggBrfPortal.Infrastructure.dll

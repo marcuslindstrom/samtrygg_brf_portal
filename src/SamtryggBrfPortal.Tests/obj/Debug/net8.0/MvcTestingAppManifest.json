@@ -1,0 +1,5 @@
+{
+  "SamtryggBrfPortal.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/marcuslindstrom\/samtrygg_cleaning\/samtrygg_brf_portal\/src\/SamtryggBrfPortal.Core",
+  "SamtryggBrfPortal.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/marcuslindstrom\/samtrygg_cleaning\/samtrygg_brf_portal\/src\/SamtryggBrfPortal.Infrastructure",
+  "SamtryggBrfPortal.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null": "\/Users\/marcuslindstrom\/samtrygg_cleaning\/samtrygg_brf_portal\/src\/SamtryggBrfPortal.Web"
+}

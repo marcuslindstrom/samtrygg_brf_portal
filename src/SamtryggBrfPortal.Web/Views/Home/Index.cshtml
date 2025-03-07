@@ -1,0 +1,204 @@
+@{
+    ViewData["Title"] = "Hem";
+}
+
+<div class="container">
+    <div class="row align-items-center py-3">
+        <div class="col-md-6">
+            <h1 class="display-4 fw-bold">Andrahandsuthyrning för BRF:er</h1>
+            <p class="lead">Samtrygg hjälper er bostadsrättsförening med säker och smidig hantering av andrahandsuthyrningar.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start mt-3">
+                <a href="@Url.Action("Dashboard", "BRF")" class="btn btn-primary btn-lg px-4 me-md-2">För BRF-styrelser</a>
+                <a href="@Url.Action("Dashboard", "Resident")" class="btn btn-outline-secondary btn-lg px-4">För bostadsrättsinnehavare</a>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="bg-light rounded shadow p-3 text-center">
+                <i class="bi bi-building text-primary" style="font-size: 8rem;"></i>
+                <p class="text-medium mt-2">Samtrygg BRF Portal</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row text-center py-3">
+        <h2 class="mb-3">Hur det fungerar</h2>
+        
+        <div class="col-md-4 mb-3">
+            <div class="card card-clickable h-100 border-0 shadow-sm">
+                <div class="card-body p-3">
+                    <div class="rounded-circle bg-light p-3 d-inline-block mb-2">
+                        <i class="bi bi-house-door fs-1 text-primary"></i>
+                    </div>
+                    <h3 class="card-title h5">För BRF-styrelser</h3>
+                    <p class="card-text">Enkel hantering av andrahandsansökningar med full insyn och kontroll över processen.</p>
+                    <a href="@Url.Action("Dashboard", "BRF")" class="btn btn-sm btn-outline-primary mt-2">Läs mer</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+            <div class="card card-clickable h-100 border-0 shadow-sm">
+                <div class="card-body p-3">
+                    <div class="rounded-circle bg-light p-3 d-inline-block mb-2">
+                        <i class="bi bi-person fs-1 text-primary"></i>
+                    </div>
+                    <h3 class="card-title h5">För bostadsrättsinnehavare</h3>
+                    <p class="card-text">Trygg och smidig process för att hyra ut din bostadsrätt i andra hand med digital hantering.</p>
+                    <a href="@Url.Action("Dashboard", "Resident")" class="btn btn-sm btn-outline-primary mt-2">Läs mer</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-4 mb-3">
+            <div class="card card-clickable h-100 border-0 shadow-sm">
+                <div class="card-body p-3">
+                    <div class="rounded-circle bg-light p-3 d-inline-block mb-2">
+                        <i class="bi bi-search fs-1 text-primary"></i>
+                    </div>
+                    <h3 class="card-title h5">För hyresgäster</h3>
+                    <p class="card-text">En bekväm väg till ett tryggt andrahandsboende med tydlig kommunikation och information.</p>
+                    <a href="#" class="btn btn-sm btn-outline-primary mt-2">Läs mer</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-3 align-items-center">
+        <div class="col-md-6">
+            <h2>Varför välja Samtrygg?</h2>
+            <ul class="list-unstyled">
+                <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>Trygghet och säkerhet</strong> - Bakgrundskontroller av hyresgäster
+                </li>
+                <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>Minskad administration</strong> - Digital hantering av hela processen
+                </li>
+                <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>Transparens</strong> - Full insyn för alla involverade parter
+                </li>
+                <li class="mb-2">
+                    <i class="bi bi-check-circle-fill text-success me-2"></i>
+                    <strong>Juridisk trygghet</strong> - Säkra avtal och dokumenthantering
+                </li>
+            </ul>
+            <a href="#" class="btn btn-primary mt-2">Läs mer om våra tjänster</a>
+        </div>
+        <div class="col-md-6">
+            <div class="bg-light rounded shadow p-3 text-center">
+                <i class="bi bi-shield-check text-primary" style="font-size: 8rem;"></i>
+                <p class="text-medium mt-2">Säkerhet och Trygghet</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-3">
+        <div class="col-12 text-center mb-3">
+            <h2>Våra kunder</h2>
+            <p class="lead">Över 200 bostadsrättsföreningar använder redan vår tjänst</p>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card card-static border-0 shadow-sm h-100">
+                <div class="card-body p-3">
+                    <p class="card-text fst-italic">"Samtryggs tjänst har förenklat vår hantering av andrahandsuthyrningar avsevärt och gett oss bättre kontroll över vilka som bor i föreningen."</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-light p-2 me-2">
+                            <i class="bi bi-person-circle" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Maria Andersson</h6>
+                            <small class="text-medium">Ordförande, BRF Solhöjden</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card card-static border-0 shadow-sm h-100">
+                <div class="card-body p-3">
+                    <p class="card-text fst-italic">"Processen är smidig både för styrelsen och för medlemmarna. Vi har fått mycket positiv feedback sedan vi började använda tjänsten."</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-light p-2 me-2">
+                            <i class="bi bi-person-circle" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Johan Bergman</h6>
+                            <small class="text-medium">Styrelsemedlem, BRF Stadsparken</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-3">
+            <div class="card card-static border-0 shadow-sm h-100">
+                <div class="card-body p-3">
+                    <p class="card-text fst-italic">"Den digitala hanteringen sparar mycket tid och gör det enkelt att hålla koll på alla uthyrningar. Kan varmt rekommendera!"</p>
+                </div>
+                <div class="card-footer bg-transparent border-0 pb-3">
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-light p-2 me-2">
+                            <i class="bi bi-person-circle" style="font-size: 2rem;"></i>
+                        </div>
+                        <div>
+                            <h6 class="mb-0">Anna Nilsson</h6>
+                            <small class="text-medium">Sekreterare, BRF Havsutsikten</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-3 bg-light rounded-3 p-3 mb-3">
+        <div class="col-12 text-center mb-3">
+            <h2>Kom igång redan idag</h2>
+            <p class="lead">Enkel och smidig implementering för din bostadsrättsförening</p>
+        </div>
+        <div class="col-md-4 mb-2 mb-md-0">
+            <div class="card card-static h-100 border-0">
+                <div class="card-body text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-2" style="width: 60px; height: 60px;">1</div>
+                    <h3 class="h5">Registrera er förening</h3>
+                    <p class="card-text">Skapa ett konto och registrera er bostadsrättsförening i vår portal.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 mb-2 mb-md-0">
+            <div class="card card-static h-100 border-0">
+                <div class="card-body text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-2" style="width: 60px; height: 60px;">2</div>
+                    <h3 class="h5">Bjud in styrelsen</h3>
+                    <p class="card-text">Lägg till styrelsemedlemmar och tilldela behörigheter för hantering.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card card-static h-100 border-0">
+                <div class="card-body text-center">
+                    <div class="rounded-circle bg-primary text-white d-inline-flex justify-content-center align-items-center mb-2" style="width: 60px; height: 60px;">3</div>
+                    <h3 class="h5">Börja använda tjänsten</h3>
+                    <p class="card-text">Hantera andrahandsuthyrningar smidigt och säkert direkt i portalen.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-12 text-center mt-3">
+            <a href="#" class="btn btn-lg btn-primary">Registrera er förening</a>
+            <p class="small mt-2">Eller <a href="#" class="text-primary">kontakta oss</a> för mer information</p>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        // Any page-specific JavaScript can be added here
+    </script>
+}

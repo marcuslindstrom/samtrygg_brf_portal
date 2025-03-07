@@ -1,0 +1,209 @@
+@{
+    ViewData["Title"] = "BRF Fastigheter";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Fastigheter</h1>
+    
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="list-group">
+                <a href="@Url.Action("Dashboard", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Properties", "BRF")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-house-door me-2"></i> Fastigheter
+                </a>
+                <a href="@Url.Action("Applications", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Members", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-people me-2"></i> Medlemmar
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-md-9">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Alla fastigheter</h5>
+                    <button class="btn btn-primary btn-sm">
+                        <i class="bi bi-plus-lg me-1"></i> Lägg till fastighet
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Adress</th>
+                                    <th>Storlek</th>
+                                    <th>Ägare</th>
+                                    <th>Status</th>
+                                    <th>Åtgärder</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1001</td>
+                                    <td>Storgatan 1, Lägenhet 1101</td>
+                                    <td>3 rum, 75 m²</td>
+                                    <td>Johan Johansson</td>
+                                    <td><span class="badge bg-success">Tillgänglig</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1002</td>
+                                    <td>Storgatan 1, Lägenhet 1201</td>
+                                    <td>2 rum, 55 m²</td>
+                                    <td>Anna Andersson</td>
+                                    <td><span class="badge bg-warning">Ansökan pågår</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1003</td>
+                                    <td>Storgatan 1, Lägenhet 1301</td>
+                                    <td>4 rum, 95 m²</td>
+                                    <td>Per Persson</td>
+                                    <td><span class="badge bg-danger">Uthyrd</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1004</td>
+                                    <td>Storgatan 1, Lägenhet 1401</td>
+                                    <td>3 rum, 70 m²</td>
+                                    <td>Maria Svensson</td>
+                                    <td><span class="badge bg-warning">Ansökan pågår</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1005</td>
+                                    <td>Storgatan 1, Lägenhet 1501</td>
+                                    <td>2 rum, 60 m²</td>
+                                    <td>Erik Eriksson</td>
+                                    <td><span class="badge bg-warning">Ansökan pågår</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Fastighetsstatistik</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-3">
+                                <div class="card-body">
+                                    <h6 class="card-title">Status</h6>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Tillgängliga:</span>
+                                        <span class="fw-bold">1 (20%)</span>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 10px;">
+                                        <div class="progress-bar bg-success" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Ansökan pågår:</span>
+                                        <span class="fw-bold">3 (60%)</span>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 10px;">
+                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>Uthyrda:</span>
+                                        <span class="fw-bold">1 (20%)</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-danger" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h6 class="card-title">Storlek</h6>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>2 rum:</span>
+                                        <span class="fw-bold">2 (40%)</span>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 10px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>3 rum:</span>
+                                        <span class="fw-bold">2 (40%)</span>
+                                    </div>
+                                    <div class="progress mb-3" style="height: 10px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 40%;" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <span>4 rum:</span>
+                                        <span class="fw-bold">1 (20%)</span>
+                                    </div>
+                                    <div class="progress" style="height: 10px;">
+                                        <div class="progress-bar bg-info" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

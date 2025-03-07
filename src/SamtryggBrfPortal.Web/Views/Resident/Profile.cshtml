@@ -1,0 +1,170 @@
+@{
+    ViewData["Title"] = "Min profil";
+}
+
+<div class="container">
+    <h1 class="mb-4">Min profil</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group mb-4">
+                <a href="@Url.Action("Dashboard", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Applications", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Profile", "Resident")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-person me-2"></i> Profil
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Personuppgifter</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="firstName" class="form-label">Förnamn</label>
+                                <input type="text" class="form-control" id="firstName" value="Johan" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="lastName" class="form-label">Efternamn</label>
+                                <input type="text" class="form-control" id="lastName" value="Johansson" required>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">E-post</label>
+                                <input type="email" class="form-control" id="email" value="johan.johansson@example.com" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Telefon</label>
+                                <input type="tel" class="form-control" id="phone" value="070-123 45 67" required>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="personalNumber" class="form-label">Personnummer</label>
+                            <input type="text" class="form-control" id="personalNumber" value="198001011234" required>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Spara ändringar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Adressuppgifter</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Gatuadress</label>
+                            <input type="text" class="form-control" id="address" value="Storgatan 1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="apartment" class="form-label">Lägenhetsnummer</label>
+                            <input type="text" class="form-control" id="apartment" value="1201" required>
+                        </div>
+                        <div class="row mb-3">
+                            <div class="col-md-4">
+                                <label for="postalCode" class="form-label">Postnummer</label>
+                                <input type="text" class="form-control" id="postalCode" value="12345" required>
+                            </div>
+                            <div class="col-md-8">
+                                <label for="city" class="form-label">Ort</label>
+                                <input type="text" class="form-control" id="city" value="Stockholm" required>
+                            </div>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Spara ändringar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Ändra lösenord</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="currentPassword" class="form-label">Nuvarande lösenord</label>
+                            <input type="password" class="form-control" id="currentPassword" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="newPassword" class="form-label">Nytt lösenord</label>
+                            <input type="password" class="form-control" id="newPassword" required>
+                            <div class="form-text">Lösenordet måste innehålla minst 8 tecken, inklusive en stor bokstav, en siffra och ett specialtecken.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmPassword" class="form-label">Bekräfta nytt lösenord</label>
+                            <input type="password" class="form-control" id="confirmPassword" required>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Ändra lösenord</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Notifikationsinställningar</h5>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="emailNotifications" checked>
+                                <label class="form-check-label" for="emailNotifications">E-postnotifikationer</label>
+                            </div>
+                            <div class="form-text">Få notifikationer via e-post om uppdateringar och händelser.</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="smsNotifications">
+                                <label class="form-check-label" for="smsNotifications">SMS-notifikationer</label>
+                            </div>
+                            <div class="form-text">Få notifikationer via SMS om viktiga uppdateringar och händelser.</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="applicationUpdates" checked>
+                                <label class="form-check-label" for="applicationUpdates">Uppdateringar om ansökningar</label>
+                            </div>
+                            <div class="form-text">Få notifikationer när statusen på dina ansökningar ändras.</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="documentUpdates" checked>
+                                <label class="form-check-label" for="documentUpdates">Uppdateringar om dokument</label>
+                            </div>
+                            <div class="form-text">Få notifikationer när nya dokument laddas upp eller när dokument behöver åtgärdas.</div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" id="newsletterUpdates">
+                                <label class="form-check-label" for="newsletterUpdates">Nyhetsbrev</label>
+                            </div>
+                            <div class="form-text">Få nyhetsbrev med information om tjänsten och tips för andrahandsuthyrning.</div>
+                        </div>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                            <button type="submit" class="btn btn-primary">Spara inställningar</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,237 @@
+@{
+    ViewData["Title"] = "BRF Ansökningar";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Ansökningar</h1>
+    
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="list-group">
+                <a href="@Url.Action("Dashboard", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Properties", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-house-door me-2"></i> Fastigheter
+                </a>
+                <a href="@Url.Action("Applications", "BRF")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Members", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-people me-2"></i> Medlemmar
+                </a>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Filter</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Status</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="statusPending" checked>
+                            <label class="form-check-label" for="statusPending">
+                                Väntar
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="statusApproved" checked>
+                            <label class="form-check-label" for="statusApproved">
+                                Godkänd
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="statusRejected">
+                            <label class="form-check-label" for="statusRejected">
+                                Avvisad
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label class="form-label">Datum</label>
+                        <select class="form-select">
+                            <option selected>Alla datum</option>
+                            <option>Senaste veckan</option>
+                            <option>Senaste månaden</option>
+                            <option>Senaste 3 månaderna</option>
+                        </select>
+                    </div>
+                    
+                    <button class="btn btn-primary w-100">Tillämpa filter</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-9">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Alla ansökningar</h5>
+                    <div class="input-group" style="width: 250px;">
+                        <input type="text" class="form-control" placeholder="Sök ansökningar...">
+                        <button class="btn btn-outline-secondary" type="button">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Datum</th>
+                                    <th>Sökande</th>
+                                    <th>Fastighet</th>
+                                    <th>Status</th>
+                                    <th>Åtgärder</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A1001</td>
+                                    <td>2025-03-05</td>
+                                    <td>Anna Andersson</td>
+                                    <td>Lägenhet 1201</td>
+                                    <td><span class="badge bg-warning">Väntar</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-success">
+                                                <i class="bi bi-check-lg"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-x-lg"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>A1002</td>
+                                    <td>2025-03-03</td>
+                                    <td>Erik Eriksson</td>
+                                    <td>Lägenhet 1502</td>
+                                    <td><span class="badge bg-warning">Väntar</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-success">
+                                                <i class="bi bi-check-lg"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-x-lg"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>A1003</td>
+                                    <td>2025-03-01</td>
+                                    <td>Maria Svensson</td>
+                                    <td>Lägenhet 1401</td>
+                                    <td><span class="badge bg-warning">Väntar</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-success">
+                                                <i class="bi bi-check-lg"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-x-lg"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>A1004</td>
+                                    <td>2025-02-25</td>
+                                    <td>Lars Larsson</td>
+                                    <td>Lägenhet 1301</td>
+                                    <td><span class="badge bg-success">Godkänd</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>A1005</td>
+                                    <td>2025-02-20</td>
+                                    <td>Karin Karlsson</td>
+                                    <td>Lägenhet 1101</td>
+                                    <td><span class="badge bg-success">Godkänd</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center mt-4">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Föregående</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Nästa</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Ansökningsstatistik</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="display-4 fw-bold text-warning">3</div>
+                            <div>Väntande ansökningar</div>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="display-4 fw-bold text-success">2</div>
+                            <div>Godkända ansökningar</div>
+                        </div>
+                        <div class="col-md-4 text-center mb-3">
+                            <div class="display-4 fw-bold text-danger">0</div>
+                            <div>Avvisade ansökningar</div>
+                        </div>
+                    </div>
+                    
+                    <hr>
+                    
+                    <div class="d-flex justify-content-between mb-2">
+                        <span>Genomsnittlig handläggningstid:</span>
+                        <span class="fw-bold">5 dagar</span>
+                    </div>
+                    <div class="d-flex justify-content-between">
+                        <span>Godkännandefrekvens:</span>
+                        <span class="fw-bold">100%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

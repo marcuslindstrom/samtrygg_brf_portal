@@ -1,0 +1,240 @@
+@{
+    ViewData["Title"] = "Mina dokument";
+}
+
+<div class="container">
+    <h1 class="mb-4">Mina dokument</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group mb-4">
+                <a href="@Url.Action("Dashboard", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Applications", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "Resident")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Profile", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-person me-2"></i> Profil
+                </a>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Dokumentkategorier</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="list-group list-group-flush">
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Alla dokument
+                            <span class="badge bg-primary rounded-pill">8</span>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Hyresavtal
+                            <span class="badge bg-primary rounded-pill">3</span>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Ansökningshandlingar
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Intyg
+                            <span class="badge bg-primary rounded-pill">1</span>
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
+                            Övrigt
+                            <span class="badge bg-primary rounded-pill">2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h4 mb-0">Alla dokument</h2>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#uploadDocumentModal">
+                    <i class="bi bi-upload me-2"></i> Ladda upp dokument
+                </button>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Dokument</h5>
+                        <div class="input-group" style="width: 250px;">
+                            <input type="text" class="form-control" placeholder="Sök dokument...">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Namn</th>
+                                    <th>Kategori</th>
+                                    <th>Uppladdad</th>
+                                    <th>Storlek</th>
+                                    <th>Åtgärd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <i class="bi bi-file-earmark-pdf text-danger me-2"></i>
+                                        Hyresavtal_2025.pdf
+                                    </td>
+                                    <td>Hyresavtal</td>
+                                    <td>2025-03-01</td>
+                                    <td>1.2 MB</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="bi bi-file-earmark-pdf text-danger me-2"></i>
+                                        Arbetsgivarintyg.pdf
+                                    </td>
+                                    <td>Intyg</td>
+                                    <td>2025-02-20</td>
+                                    <td>0.8 MB</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="bi bi-file-earmark-word text-primary me-2"></i>
+                                        Ansökan_2025.docx
+                                    </td>
+                                    <td>Ansökningshandlingar</td>
+                                    <td>2025-02-15</td>
+                                    <td>0.5 MB</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <i class="bi bi-file-earmark-image text-success me-2"></i>
+                                        Lägenhetsfoto.jpg
+                                    </td>
+                                    <td>Övrigt</td>
+                                    <td>2025-02-10</td>
+                                    <td>2.5 MB</td>
+                                    <td>
+                                        <div class="btn-group">
+                                            <button class="btn btn-sm btn-outline-primary">
+                                                <i class="bi bi-download"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-sm btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <nav aria-label="Page navigation">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Föregående</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Nästa</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+<!-- Modal för att ladda upp dokument -->
+<div class="modal fade" id="uploadDocumentModal" tabindex="-1" aria-labelledby="uploadDocumentModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="uploadDocumentModalLabel">Ladda upp dokument</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="documentFile" class="form-label">Välj fil</label>
+                        <input type="file" class="form-control" id="documentFile" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="documentName" class="form-label">Dokumentnamn</label>
+                        <input type="text" class="form-control" id="documentName" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="documentCategory" class="form-label">Kategori</label>
+                        <select class="form-select" id="documentCategory" required>
+                            <option selected disabled value="">Välj kategori...</option>
+                            <option>Hyresavtal</option>
+                            <option>Ansökningshandlingar</option>
+                            <option>Intyg</option>
+                            <option>Övrigt</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="documentDescription" class="form-label">Beskrivning (valfritt)</label>
+                        <textarea class="form-control" id="documentDescription" rows="3"></textarea>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Avbryt</button>
+                <button type="button" class="btn btn-primary">Ladda upp</button>
+            </div>
+        </div>
+    </div>
+</div>

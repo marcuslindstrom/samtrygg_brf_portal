@@ -1,0 +1,114 @@
+@{
+    ViewData["Title"] = "Bostadsrättsinnehavare Dashboard";
+}
+
+<div class="container">
+    <h1 class="mb-4">Bostadsrättsinnehavare Dashboard</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group mb-4">
+                <a href="@Url.Action("Dashboard", "Resident")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Applications", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Profile", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-person me-2"></i> Profil
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Min lägenhet</h5>
+                            <p class="card-text">
+                                <strong>Adress:</strong> Storgatan 1, Lägenhet 1201<br>
+                                <strong>Storlek:</strong> 3 rum, 75 m²<br>
+                                <strong>Status:</strong> <span class="badge bg-success">Tillgänglig</span>
+                            </p>
+                            <a href="#" class="btn btn-outline-primary">Hantera lägenhet</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <div class="card border-0 shadow-sm h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Andrahandsuthyrning</h5>
+                            <p class="card-text">
+                                <strong>Status:</strong> <span class="badge bg-warning">Ingen aktiv</span><br>
+                                <strong>Tidigare uthyrningar:</strong> 1<br>
+                            </p>
+                            <a href="@Url.Action("Applications", "Resident")" class="btn btn-primary">Skapa ansökan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Senaste aktiviteter</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item px-0">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Dokument uppladdad</h6>
+                                <small class="text-muted">2025-03-01</small>
+                            </div>
+                            <p class="mb-1">Du laddade upp ett nytt dokument: "Hyresavtal.pdf"</p>
+                        </div>
+                        <div class="list-group-item px-0">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Ansökan skapad</h6>
+                                <small class="text-muted">2025-02-15</small>
+                            </div>
+                            <p class="mb-1">Du skapade en ny ansökan om andrahandsuthyrning</p>
+                        </div>
+                        <div class="list-group-item px-0">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Profil uppdaterad</h6>
+                                <small class="text-muted">2025-02-10</small>
+                            </div>
+                            <p class="mb-1">Du uppdaterade din profilinformation</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Meddelanden</h5>
+                </div>
+                <div class="card-body">
+                    <div class="list-group list-group-flush">
+                        <div class="list-group-item px-0">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Från: BRF Styrelsen</h6>
+                                <small class="text-muted">2025-03-05</small>
+                            </div>
+                            <p class="mb-1">Din ansökan om andrahandsuthyrning har godkänts.</p>
+                            <small class="text-muted">Klicka för att läsa mer</small>
+                        </div>
+                        <div class="list-group-item px-0">
+                            <div class="d-flex w-100 justify-content-between">
+                                <h6 class="mb-1">Från: Systemet</h6>
+                                <small class="text-muted">2025-02-20</small>
+                            </div>
+                            <p class="mb-1">Påminnelse: Komplettera din ansökan med hyresgästens personuppgifter.</p>
+                            <small class="text-muted">Klicka för att läsa mer</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

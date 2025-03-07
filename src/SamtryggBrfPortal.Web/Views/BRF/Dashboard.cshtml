@@ -1,0 +1,172 @@
+@model SamtryggBrfPortal.Infrastructure.ViewModels.BrfDashboardViewModel
+@{
+    ViewData["Title"] = "BRF Styrelse Dashboard";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">@Model.BrfName - Styrelse Dashboard</h1>
+    
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="list-group">
+                <a href="@Url.Action("Dashboard", "BRF")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Properties", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-house-door me-2"></i> Fastigheter
+                </a>
+                <a href="@Url.Action("Applications", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Members", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-people me-2"></i> Medlemmar
+                </a>
+            </div>
+        </div>
+        
+        <div class="col-md-9">
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card text-white bg-primary">
+                        <div class="card-body">
+                            <h5 class="card-title">Fastigheter</h5>
+                            <p class="card-text display-4">@Model.TotalProperties</p>
+                            <p class="card-text">Totalt antal fastigheter</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card text-white bg-success">
+                        <div class="card-body">
+                            <h5 class="card-title">Ansökningar</h5>
+                            <p class="card-text display-4">@Model.PendingApplications</p>
+                            <p class="card-text">Väntande ansökningar</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="card text-white bg-info">
+                        <div class="card-body">
+                            <h5 class="card-title">Dokument</h5>
+                            <p class="card-text display-4">@Model.BoardMemberCount</p>
+                            <p class="card-text">Styrelsemedlemmar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Senaste ansökningar</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Datum</th>
+                                    <th>Namn</th>
+                                    <th>Fastighet</th>
+                                    <th>Status</th>
+                                    <th>Åtgärd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.RecentApplications != null && Model.RecentApplications.Any())
+                                {
+                                    @foreach (var application in Model.RecentApplications)
+                                    {
+                                        <tr>
+                                            <td>@application.SubmittedAt.ToString("yyyy-MM-dd")</td>
+                                            <td>@application.ApplicantName</td>
+                                            <td>@application.PropertyAddress</td>
+                                            <td>
+                                                @{
+                                                    string badgeClass = "bg-warning";
+                                                    switch (application.Status)
+                                                    {
+                                                        case SamtryggBrfPortal.Core.Enums.RentalStatus.Approved:
+                                                            badgeClass = "bg-success";
+                                                            break;
+                                                        case SamtryggBrfPortal.Core.Enums.RentalStatus.Rejected:
+                                                            badgeClass = "bg-danger";
+                                                            break;
+                                                        case SamtryggBrfPortal.Core.Enums.RentalStatus.Pending:
+                                                            badgeClass = "bg-warning";
+                                                            break;
+                                                        case SamtryggBrfPortal.Core.Enums.RentalStatus.Cancelled:
+                                                            badgeClass = "bg-secondary";
+                                                            break;
+                                                    }
+                                                }
+                                                <span class="badge @badgeClass">@application.StatusText</span>
+                                            </td>
+                                            <td>
+                                                <a href="@Url.Action("ApplicationDetails", "BRF", new { id = application.Id })" class="btn btn-sm btn-primary">Visa</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="5" class="text-center">Inga ansökningar att visa</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">Tillgängliga fastigheter</h5>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Adress</th>
+                                    <th>Storlek</th>
+                                    <th>Rum</th>
+                                    <th>Hyra</th>
+                                    <th>Åtgärd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @if (Model.AvailablePropertiesList != null && Model.AvailablePropertiesList.Any())
+                                {
+                                    @foreach (var property in Model.AvailablePropertiesList)
+                                    {
+                                        <tr>
+                                            <td>@property.Address</td>
+                                            <td>@property.Size m²</td>
+                                            <td>@property.NumberOfRooms</td>
+                                            <td>@property.MonthlyRent.ToString("N0") kr</td>
+                                            <td>
+                                                <a href="@Url.Action("PropertyDetails", "BRF", new { id = property.Id })" class="btn btn-sm btn-primary">Visa</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                }
+                                else
+                                {
+                                    <tr>
+                                        <td colspan="5" class="text-center">Inga tillgängliga fastigheter att visa</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,165 @@
+@{
+    ViewData["Title"] = "Kontakt";
+}
+
+<div class="container">
+    <div class="row mb-5">
+        <div class="col-12">
+            <h1 class="display-4 fw-bold mb-4">Kontakta oss</h1>
+            <p class="lead">Har du frågor om vår tjänst eller vill du veta mer om hur Samtrygg BRF Portal kan hjälpa er förening? Kontakta oss gärna!</p>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-md-6">
+            <h2 class="mb-4">Fyll i vårt kontaktformulär</h2>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Namn *</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-post *</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefonnummer</label>
+                    <input type="tel" class="form-control" id="phone">
+                </div>
+                <div class="mb-3">
+                    <label for="brfName" class="form-label">Bostadsrättsförening</label>
+                    <input type="text" class="form-control" id="brfName">
+                </div>
+                <div class="mb-3">
+                    <label for="subject" class="form-label">Ämne *</label>
+                    <select class="form-select" id="subject" required>
+                        <option selected disabled value="">Välj ämne...</option>
+                        <option>Allmän information</option>
+                        <option>Bli kund</option>
+                        <option>Support</option>
+                        <option>Tekniska frågor</option>
+                        <option>Annat</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Meddelande *</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <div class="mb-3 form-check">
+                    <input type="checkbox" class="form-check-input" id="gdprConsent" required>
+                    <label class="form-check-label" for="gdprConsent">Jag godkänner att Samtrygg behandlar mina personuppgifter enligt <a href="#">integritetspolicyn</a> *</label>
+                </div>
+                <button type="submit" class="btn btn-primary">Skicka meddelande</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h2 class="mb-4">Kontaktuppgifter</h2>
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h3 class="h5 mb-3">Kundtjänst</h3>
+                    <p><i class="bi bi-envelope me-2"></i> info@samtrygg.se</p>
+                    <p><i class="bi bi-telephone me-2"></i> 08-123 45 67</p>
+                    <p><i class="bi bi-clock me-2"></i> Vardagar 09:00-17:00</p>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body p-4">
+                    <h3 class="h5 mb-3">Teknisk support</h3>
+                    <p><i class="bi bi-envelope me-2"></i> support@samtrygg.se</p>
+                    <p><i class="bi bi-telephone me-2"></i> 08-123 45 68</p>
+                    <p><i class="bi bi-clock me-2"></i> Vardagar 08:00-18:00</p>
+                </div>
+            </div>
+            
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <h3 class="h5 mb-3">Besöksadress</h3>
+                    <p><i class="bi bi-geo-alt me-2"></i> Storgatan 1, 114 44 Stockholm</p>
+                    <div class="ratio ratio-16x9 mt-3">
+                        <div class="bg-light d-flex align-items-center justify-content-center">
+                            <i class="bi bi-map" style="font-size: 4rem;"></i>
+                            <span class="ms-3">Kartan laddas här</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-5">
+        <div class="col-12">
+            <h2 class="mb-4">Vanliga frågor</h2>
+            <div class="accordion" id="faqAccordion">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseOne" aria-expanded="true" aria-controls="faqCollapseOne">
+                            Hur kommer vår BRF igång med Samtrygg BRF Portal?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseOne" class="accordion-collapse collapse show" aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Det är enkelt att komma igång! Registrera er förening via vår webbplats eller kontakta oss för ett personligt möte. Vi hjälper er med hela uppsättningen och erbjuder utbildning för styrelsen.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseTwo" aria-expanded="false" aria-controls="faqCollapseTwo">
+                            Vad kostar tjänsten för vår förening?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseTwo" class="accordion-collapse collapse" aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Vi erbjuder olika prismodeller beroende på föreningens storlek och behov. Kontakta oss för en personlig offert anpassad efter era förutsättningar.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseThree" aria-expanded="false" aria-controls="faqCollapseThree">
+                            Hur hanteras GDPR och personuppgifter i systemet?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseThree" class="accordion-collapse collapse" aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Vi tar dataskydd på största allvar. Samtrygg BRF Portal är helt GDPR-kompatibel och vi har tydliga rutiner för hur personuppgifter hanteras. Vi agerar som personuppgiftsbiträde åt föreningen och har alla nödvändiga avtal på plats.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFour" aria-expanded="false" aria-controls="faqCollapseFour">
+                            Kan vi anpassa regler och krav för andrahandsuthyrning?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFour" class="accordion-collapse collapse" aria-labelledby="faqHeadingFour" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            Absolut! Systemet är anpassningsbart efter föreningens stadgar och regler. Vi hjälper er att konfigurera portalen så att den speglar just era krav och processer för andrahandsuthyrning.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="faqHeadingFive">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faqCollapseFive" aria-expanded="false" aria-controls="faqCollapseFive">
+                            Hur fungerar integrationen med BankID?
+                        </button>
+                    </h2>
+                    <div id="faqCollapseFive" class="accordion-collapse collapse" aria-labelledby="faqHeadingFive" data-bs-parent="#faqAccordion">
+                        <div class="accordion-body">
+                            BankID används för säker inloggning och digital signering av dokument. Detta ger en hög säkerhetsnivå och gör att avtal kan signeras snabbt och smidigt av alla parter utan behov av pappershantering.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row py-5 bg-light rounded-3 p-4 mb-5 text-center">
+        <div class="col-12">
+            <h2 class="mb-3">Vill du veta mer?</h2>
+            <p class="lead mb-4">Boka en demonstration med någon av våra experter för att se hur Samtrygg BRF Portal kan effektivisera hanteringen av andrahandsuthyrningar i er förening.</p>
+            <a href="#" class="btn btn-lg btn-primary">Boka demonstration</a>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,7 @@
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Tests/bin/Debug/net8.0/CoverletSourceRootsMapping_SamtryggBrfPortal.Tests
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Tests/obj/Debug/net8.0/SamtryggBrfPortal.Tests.csproj.AssemblyReference.cache
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Tests/obj/Debug/net8.0/MvcTestingAppManifest.json
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Tests/obj/Debug/net8.0/SamtryggBrfPortal.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Tests/obj/Debug/net8.0/SamtryggBrfPortal.Tests.AssemblyInfoInputs.cache
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Tests/obj/Debug/net8.0/SamtryggBrfPortal.Tests.AssemblyInfo.cs
+/Users/marcuslindstrom/samtrygg_cleaning/samtrygg_brf_portal/src/SamtryggBrfPortal.Tests/obj/Debug/net8.0/SamtryggBrfPortal.Tests.csproj.CoreCompileInputs.cache

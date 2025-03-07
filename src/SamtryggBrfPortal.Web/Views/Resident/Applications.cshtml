@@ -1,0 +1,214 @@
+@{
+    ViewData["Title"] = "Mina ansökningar";
+}
+
+<div class="container">
+    <h1 class="mb-4">Mina ansökningar</h1>
+
+    <div class="row">
+        <div class="col-md-3">
+            <div class="list-group mb-4">
+                <a href="@Url.Action("Dashboard", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Applications", "Resident")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Profile", "Resident")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-person me-2"></i> Profil
+                </a>
+            </div>
+        </div>
+
+        <div class="col-md-9">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2 class="h4 mb-0">Ansökningar om andrahandsuthyrning</h2>
+                <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newApplicationModal">
+                    <i class="bi bi-plus-lg me-2"></i> Ny ansökan
+                </button>
+            </div>
+
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="mb-0">Aktiva ansökningar</h5>
+                        <div class="input-group" style="width: 250px;">
+                            <input type="text" class="form-control" placeholder="Sök ansökningar...">
+                            <button class="btn btn-outline-secondary" type="button">
+                                <i class="bi bi-search"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Datum</th>
+                                    <th>Hyresgäst</th>
+                                    <th>Period</th>
+                                    <th>Status</th>
+                                    <th>Åtgärd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A1001</td>
+                                    <td>2025-02-15</td>
+                                    <td>Anna Andersson</td>
+                                    <td>2025-04-01 till 2025-09-30</td>
+                                    <td><span class="badge bg-warning">Väntar</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-header bg-white">
+                    <h5 class="mb-0">Tidigare ansökningar</h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="table-responsive">
+                        <table class="table table-hover mb-0">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Datum</th>
+                                    <th>Hyresgäst</th>
+                                    <th>Period</th>
+                                    <th>Status</th>
+                                    <th>Åtgärd</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>A1000</td>
+                                    <td>2024-08-10</td>
+                                    <td>Erik Eriksson</td>
+                                    <td>2024-09-01 till 2025-02-28</td>
+                                    <td><span class="badge bg-success">Godkänd</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>A999</td>
+                                    <td>2024-05-05</td>
+                                    <td>Maria Svensson</td>
+                                    <td>2024-06-01 till 2024-08-31</td>
+                                    <td><span class="badge bg-danger">Avslagen</span></td>
+                                    <td>
+                                        <button class="btn btn-sm btn-outline-primary">
+                                            <i class="bi bi-eye"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal för ny ansökan -->
+<div class="modal fade" id="newApplicationModal" tabindex="-1" aria-labelledby="newApplicationModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="newApplicationModalLabel">Ny ansökan om andrahandsuthyrning</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="mb-3">
+                        <label for="property" class="form-label">Lägenhet</label>
+                        <select class="form-select" id="property" required>
+                            <option selected>Storgatan 1, Lägenhet 1201</option>
+                        </select>
+                    </div>
+
+                    <h6 class="mt-4 mb-3">Hyresgästinformation</h6>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="tenantFirstName" class="form-label">Förnamn</label>
+                            <input type="text" class="form-control" id="tenantFirstName" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="tenantLastName" class="form-label">Efternamn</label>
+                            <input type="text" class="form-control" id="tenantLastName" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="tenantEmail" class="form-label">E-post</label>
+                            <input type="email" class="form-control" id="tenantEmail" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="tenantPhone" class="form-label">Telefon</label>
+                            <input type="tel" class="form-control" id="tenantPhone" required>
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="tenantPersonalNumber" class="form-label">Personnummer</label>
+                        <input type="text" class="form-control" id="tenantPersonalNumber" placeholder="ÅÅÅÅMMDD-XXXX" required>
+                    </div>
+
+                    <h6 class="mt-4 mb-3">Uthyrningsperiod</h6>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label for="startDate" class="form-label">Startdatum</label>
+                            <input type="date" class="form-control" id="startDate" required>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="endDate" class="form-label">Slutdatum</label>
+                            <input type="date" class="form-control" id="endDate" required>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="reason" class="form-label">Anledning till andrahandsuthyrning</label>
+                        <select class="form-select" id="reason" required>
+                            <option selected disabled value="">Välj anledning...</option>
+                            <option>Arbete på annan ort</option>
+                            <option>Studier på annan ort</option>
+                            <option>Provsamboende</option>
+                            <option>Sjukdom</option>
+                            <option>Annat</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="reasonDescription" class="form-label">Beskrivning av anledning</label>
+                        <textarea class="form-control" id="reasonDescription" rows="3" required></textarea>
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="documents" class="form-label">Bifoga dokument</label>
+                        <input type="file" class="form-control" id="documents" multiple>
+                        <div class="form-text">Bifoga relevanta dokument som styrker din anledning till andrahandsuthyrning.</div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Avbryt</button>
+                <button type="button" class="btn btn-primary">Skicka ansökan</button>
+            </div>
+        </div>
+    </div>
+</div>

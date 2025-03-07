@@ -1,0 +1,295 @@
+@{
+    ViewData["Title"] = "BRF Medlemmar";
+}
+
+<div class="container mt-4">
+    <h1 class="mb-4">Medlemmar</h1>
+    
+    <div class="row">
+        <div class="col-md-3 mb-4">
+            <div class="list-group">
+                <a href="@Url.Action("Dashboard", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-speedometer2 me-2"></i> Dashboard
+                </a>
+                <a href="@Url.Action("Properties", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-house-door me-2"></i> Fastigheter
+                </a>
+                <a href="@Url.Action("Applications", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark-text me-2"></i> Ansökningar
+                </a>
+                <a href="@Url.Action("Documents", "BRF")" class="list-group-item list-group-item-action">
+                    <i class="bi bi-file-earmark me-2"></i> Dokument
+                </a>
+                <a href="@Url.Action("Members", "BRF")" class="list-group-item list-group-item-action active">
+                    <i class="bi bi-people me-2"></i> Medlemmar
+                </a>
+            </div>
+            
+            <div class="card mt-4">
+                <div class="card-header">
+                    <h5 class="mb-0">Filter</h5>
+                </div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="form-label">Medlemstyp</label>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="memberTypeAll" checked>
+                            <label class="form-check-label" for="memberTypeAll">
+                                Alla medlemmar
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="memberTypeBoard" checked>
+                            <label class="form-check-label" for="memberTypeBoard">
+                                Styrelsemedlemmar
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="memberTypeRegular" checked>
+                            <label class="form-check-label" for="memberTypeRegular">
+                                Vanliga medlemmar
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="memberSearch" class="form-label">Sök</label>
+                        <input type="text" class="form-control" id="memberSearch" placeholder="Namn, e-post eller lägenhet">
+                    </div>
+                    
+                    <button class="btn btn-primary w-100">Tillämpa filter</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-9">
+            <div class="card mb-4">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <h5 class="mb-0">Alla medlemmar</h5>
+                    <button class="btn btn-primary btn-sm">
+                        <i class="bi bi-plus-lg me-1"></i> Lägg till medlem
+                    </button>
+                </div>
+                <div class="card-body">
+                    <div class="table-responsive">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Namn</th>
+                                    <th>E-post</th>
+                                    <th>Telefon</th>
+                                    <th>Lägenhet</th>
+                                    <th>Roll</th>
+                                    <th>Åtgärder</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Johan Johansson</td>
+                                    <td>johan.johansson@example.com</td>
+                                    <td>070-123 45 67</td>
+                                    <td>Lägenhet 1101</td>
+                                    <td><span class="badge bg-primary">Ordförande</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Anna Andersson</td>
+                                    <td>anna.andersson@example.com</td>
+                                    <td>070-234 56 78</td>
+                                    <td>Lägenhet 1201</td>
+                                    <td><span class="badge bg-info">Sekreterare</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Per Persson</td>
+                                    <td>per.persson@example.com</td>
+                                    <td>070-345 67 89</td>
+                                    <td>Lägenhet 1301</td>
+                                    <td><span class="badge bg-success">Kassör</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Maria Svensson</td>
+                                    <td>maria.svensson@example.com</td>
+                                    <td>070-456 78 90</td>
+                                    <td>Lägenhet 1401</td>
+                                    <td><span class="badge bg-secondary">Ledamot</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Erik Eriksson</td>
+                                    <td>erik.eriksson@example.com</td>
+                                    <td>070-567 89 01</td>
+                                    <td>Lägenhet 1501</td>
+                                    <td><span class="badge bg-secondary">Medlem</span></td>
+                                    <td>
+                                        <div class="btn-group btn-group-sm">
+                                            <button class="btn btn-outline-primary">
+                                                <i class="bi bi-eye"></i>
+                                            </button>
+                                            <button class="btn btn-outline-secondary">
+                                                <i class="bi bi-pencil"></i>
+                                            </button>
+                                            <button class="btn btn-outline-danger">
+                                                <i class="bi bi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination justify-content-center mt-4">
+                            <li class="page-item disabled">
+                                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Föregående</a>
+                            </li>
+                            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#">Nästa</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Styrelsemedlemmar</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="list-group list-group-flush">
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-0">Johan Johansson</h6>
+                                        <small class="text-muted">Ordförande</small>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-envelope"></i>
+                                    </button>
+                                </div>
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-0">Anna Andersson</h6>
+                                        <small class="text-muted">Sekreterare</small>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-envelope"></i>
+                                    </button>
+                                </div>
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-0">Per Persson</h6>
+                                        <small class="text-muted">Kassör</small>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-envelope"></i>
+                                    </button>
+                                </div>
+                                <div class="list-group-item d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-0">Maria Svensson</h6>
+                                        <small class="text-muted">Ledamot</small>
+                                    </div>
+                                    <button class="btn btn-sm btn-outline-primary">
+                                        <i class="bi bi-envelope"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 mb-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h5 class="mb-0">Medlemsstatistik</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-4">
+                                <h6>Medlemstyper</h6>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Styrelsemedlemmar:</span>
+                                    <span class="fw-bold">4 (80%)</span>
+                                </div>
+                                <div class="progress mb-3" style="height: 10px;">
+                                    <div class="progress-bar bg-primary" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Vanliga medlemmar:</span>
+                                    <span class="fw-bold">1 (20%)</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-secondary" role="progressbar" style="width: 20%;" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h6>Aktivitet</h6>
+                                <div class="d-flex justify-content-between mb-2">
+                                    <span>Aktiva medlemmar:</span>
+                                    <span class="fw-bold">5 (100%)</span>
+                                </div>
+                                <div class="progress" style="height: 10px;">
+                                    <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

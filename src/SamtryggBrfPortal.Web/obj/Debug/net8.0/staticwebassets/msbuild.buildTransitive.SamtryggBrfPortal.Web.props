@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../buildMultiTargeting/SamtryggBrfPortal.Web.props" />
+</Project>

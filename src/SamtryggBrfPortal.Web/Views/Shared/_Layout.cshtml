@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Samtrygg BRF Portal - En plattform för bostadsrättsföreningar att hantera uthyrningar och ansökningar" />
+    <title>@ViewData["Title"] - Samtrygg BRF Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Using Inter as a fallback for Nuckle since Nuckle might not be publicly available -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <a href="#main-content" class="skip-to-content">Hoppa till innehåll</a>
+    <header class="standard-container">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3" aria-label="Huvudnavigation">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index" aria-label="Samtrygg BRF Portal hemsida">
+                    <i class="bi bi-buildings text-primary" style="font-size: 2rem;" aria-hidden="true"></i>
+                    <span class="ms-2 text-dark">Samtrygg BRF Portal</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Index">Hem</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="About">Om tjänsten</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" asp-area="" asp-controller="Home" asp-action="Contact">Kontakt</a>
+                        </li>
+                    </ul>
+                    <partial name="_LoginPartial" />
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main id="main-content" role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer" role="contentinfo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    &copy; @DateTime.Now.Year - Samtrygg BRF Portal - <a asp-area="" asp-controller="Home" asp-action="Privacy" class="text-secondary">Integritetspolicy</a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <nav aria-label="Sidfotslänkar">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><a href="#" class="text-secondary">Villkor</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-secondary">Cookies</a></li>
+                            <li class="list-inline-item"><a href="#" class="text-secondary">GDPR</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-md-4 text-end">
+                    <a href="https://samtrygg.se" target="_blank" rel="noopener" class="text-secondary">Samtrygg.se</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
